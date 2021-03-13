@@ -1,6 +1,6 @@
 <template>
   <div>
-    eee
+    {{title}}
     <div class="hello">
       <el-popover></el-popover>
       <span>
@@ -35,14 +35,15 @@
 <script>
 export default {
     name: 'TestRender',
+    props: {
+        title: {
+            type: String,
+            default: ''
+        }
+    },
     mounted() {
         for (let a = 1; a < 10000; a++) {
-            for (let b = 1; b < 10000; b++) {
-                for (let c = 1; c < 20; c++) {
-                    let d = a + b + c
-
-                }
-            }
+            let b = a + 1
         }
     }
 }
